@@ -1,25 +1,28 @@
 RegisterCommand("leoloadout", function()
-    -- Notify User that the script is starting
-    notify("~b~Welcome to Cronus Gaming LEO Loadout Equipper")
-    Citizen.Wait(1)
-    -- Give user the following weapons
-    giveWeapon("weapon_combatpistol")
-    giveWeapon("weapon_nightstick")
-    giveWeapon("weapon_carbinerifle_mk2")
-    giveWeapon("weapon_pumpshotgun")
-    giveWeapon("weapon_stungun")
-    -- Notify user that weapons are equipped
-    notify("~b~LEO Weapons Equipped")
-    -- Give user the following weapon attachments
-    weaponComponent("weapon_combatpistol", "COMPONENT_COMBATPISTOL_CLIP_02")
-    weaponComponent("weapon_combatpistol", "COMPONENT_AT_PI_FLSH")
-    weaponComponent("weapon_carbinerifle_mk2", "COMPONENT_CARBINERIFLE_MK2_CLIP_02")
-    weaponComponent("weapon_carbinerifle_mk2", "COMPONENT_AT_AR_FLSH")
-    weaponComponent("weapon_pumpshotgun", "COMPONENT_AT_AR_FLSH")
-    -- Notify user that weapon attachments have been equipped
-    notify("~b~LEO Weapon Attachments Equipped")
-    vehMenu = true
-    notify("~b~LEO Vehicle Menu Has Been Opened")
+    CheckRole(source)
+    if(leostuff == true)
+      -- Notify User that the script is starting
+      notify("~b~Welcome to Reality Roleplay LEO Loadout Equipper")
+      Citizen.Wait(1)
+      -- Give user the following weapons
+      giveWeapon("weapon_combatpistol")
+      giveWeapon("weapon_nightstick")
+      giveWeapon("weapon_carbinerifle_mk2")
+      giveWeapon("weapon_pumpshotgun")
+      giveWeapon("weapon_stungun")
+      -- Notify user that weapons are equipped
+      notify("~b~LEO Weapons Equipped")
+      -- Give user the following weapon attachments
+      weaponComponent("weapon_combatpistol", "COMPONENT_COMBATPISTOL_CLIP_02")
+      weaponComponent("weapon_combatpistol", "COMPONENT_AT_PI_FLSH")
+      weaponComponent("weapon_carbinerifle_mk2", "COMPONENT_CARBINERIFLE_MK2_CLIP_02")
+      weaponComponent("weapon_carbinerifle_mk2", "COMPONENT_AT_AR_FLSH")
+      weaponComponent("weapon_pumpshotgun", "COMPONENT_AT_AR_FLSH")
+      -- Notify user that weapon attachments have been equipped
+      notify("~b~LEO Weapon Attachments Equipped")
+      vehMenu = true
+      notify("~b~LEO Vehicle Menu Has Been Opened")
+    end
 end)
 
 function notify(msg)
@@ -93,7 +96,7 @@ end
 
 function undragPlayer()
     DetachEntity(PlayerPedId(), true, false)
-    notify("You are not dragging anyone anymore")
+    notify("You are no longer dragging the target")
 end
 
 function evehiclePlayer()

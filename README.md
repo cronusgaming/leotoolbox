@@ -1,7 +1,7 @@
 # LEO/EMS Toolbox for FiveM
 LEO Toolbox and Weapon Equipper Menu Modified for Reality Roleplay
 
-Made using [NativeUI for Lua](https://github.com/FrazzIe/NativeUILua) and [LEOToolbox](https://github.com/MichaelRP1/leotoolbox)
+Made using [NativeUI for Lua](https://github.com/FrazzIe/NativeUILua),  [LEOToolbox](https://github.com/MichaelRP1/leotoolbox)
 
 Include `client_script '@NativeUI/NativeUI.lua'` in your `__resource.lua` to use
 
@@ -30,3 +30,5 @@ Reality Roleplay staff is not under any obligation to help you with this resourc
 [Frazzle](https://github.com/FrazzIe)
 
 [Jeva](https://www.youtube.com/channel/UCI7x329xu2rLbtVvFPVIhiQ) - Inspiration / Foundation
+
+[Illusivee](https://github.com/Illusivee) - [Discord Perms "API"](https://github.com/Illusivee/discord_perms)

@@ -1,6 +1,6 @@
 _menuPool = NativeUI.CreatePool()
 -- Create Main Menu to Select Department
-mainMenu = NativeUI.CreateMenu("LEO Vehicle Menu", "~b~CRONUS GAMING LEO VEHICLES MENU")
+mainMenu = NativeUI.CreateMenu("LEO Vehicle Menu", "~b~REALITY ROLEPLAY LEO VEHICLES MENU")
 _menuPool:Add(mainMenu)
 vehMenu = false
 
@@ -112,7 +112,7 @@ end)
 
 -- End Vehicles Menu
 -- Start LEO Menu
-leoMenu = NativeUI.CreateMenu("LEO Toolbox", "~b~CRONUS GAMING LEO UTILITIES MENU")
+leoMenu = NativeUI.CreateMenu("LEO Toolbox", "~b~REALITY ROLEPLAY LEO UTILITIES MENU")
 _menuPool:Add(leoMenu)
 leostuff = false
 
@@ -141,7 +141,7 @@ function dragOption(menu)
 end
 
 function undragOption(menu)
-    local Item = NativeUI.CreateItem("Undrag", "Undrag the person closest to you")
+    local Item = NativeUI.CreateItem("Stop Dragging", "Stop dragging the person closest to you")
     menu.OnItemSelect = function(sender, item, index)
         undragPlayer()
     end
@@ -217,32 +217,30 @@ Citizen.CreateThread(function()
     end
 end)
 
--- Make Sure Player is in Correct PED for F5 menu
-local skins = {
-	"s_m_y_cop_01",
-	"s_f_y_cop_01",
-	"s_m_y_hwaycop_01",
-	"s_m_y_sheriff_01",
-	"s_f_y_sheriff_01",
-	"s_m_y_ranger_01",
-    "s_f_y_ranger_01",
-    "csb_mweather",
-    "s_m_m_armoured_01",
-    "s_m_m_armoured_02",
-    "s_m_y_blackops_02",
-    "s_m_y_fireman_01",
-    "s_m_y_grip_01",
-    "s_m_y_marine_01",
-    "s_m_y_marine_02",
-    "s_m_y_marine_03",
-    "s_m_y_ranger_01",
-    "s_m_y_swat_01",
+-- Variables
+  -- Roles
+roles = {
+    "BCSO",
+    "SASP",
+    "SAFR"
 }
 
-function CheckSkin(ped)
-	for i = 1, #skins do
-		if GetHashKey(skins[i]) == GetEntityModel(PlayerId()) then
-            leostuff = true
+function CheckRole(ped)
+    for k, v in ipairs(GetPlayerIdentifiers(ped)) do
+        if string.sub(v, 1, string.len("discord:")) == "discord:" then
+            discordIdentifier = v
         end
-	end
+    end
+
+    if discordIdentifier then
+        for i = 1, #roles do
+            if exports.discord_perms:IsRolePresent(ped, roles[i]) then
+                leostuff = true
+            else
+                leostuff = false
+            end
+        end
+    else
+        leostuff = false
+    end
 end
