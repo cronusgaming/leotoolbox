@@ -5,7 +5,6 @@ description "A simple LEO loadout script made for Cronus Gaming and modified for
 author "Michael - Reality Roleplay"
 
 depencency 'NativeUI'
-depencency 'discord_perms'
 
 client_scripts {
     'client.lua',

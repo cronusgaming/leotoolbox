@@ -24,6 +24,13 @@ RegisterCommand("leoloadout", function()
     end
 end)
 
+RegisterCommand("leovehicles", function()
+	if(leostuff == true) then
+	  vehMenu = true
+      notify("~b~LEO Vehicle Menu Has Been Opened")
+    end
+end)
+
 function notify(msg)
     SetNotificationTextEntry("STRING")
     AddTextComponentString(msg)
