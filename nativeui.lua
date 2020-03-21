@@ -33,11 +33,11 @@ function sheriffMenu(menu)
         Item5.Activated = function(ParentMenu, SelectedItem)
             spawnCar("sheriff6")
         end
-    submenu:AddItem(Item)
-    submenu:AddItem(Item2)
-    submenu:AddItem(Item3)
-    submenu:AddItem(Item4)
-    submenu:AddItem(Item5)
+    submenu.SubMenu:AddItem(Item)
+    submenu.SubMenu:AddItem(Item2)
+    submenu.SubMenu:AddItem(Item3)
+    submenu.SubMenu:AddItem(Item4)
+    submenu.SubMenu:AddItem(Item5)
     end
 end
 
@@ -64,11 +64,11 @@ function fireMenu(menu)
         Item5.Activated = function(ParentMenu, SelectedItem)
             spawnCar("ambulance")
         end
-    submenu:AddItem(Item)
-    submenu:AddItem(Item2)
-    submenu:AddItem(Item3)
-    submenu:AddItem(Item4)
-    submenu:AddItem(Item5)
+    submenu.SubMenu:AddItem(Item)
+    submenu.SubMenu:AddItem(Item2)
+    submenu.SubMenu:AddItem(Item3)
+    submenu.SubMenu:AddItem(Item4)
+    submenu.SubMenu:AddItem(Item5)
     end
 end
 
@@ -87,9 +87,9 @@ function swatMenu(menu)
         Item3.Activated = function(ParentMenu, SelectedItem)
             spawnCar("sum1")
         end
-    submenu:AddItem(Item)
-    submenu:AddItem(Item2)
-    submenu:AddItem(Item3)
+    submenu.SubMenu:AddItem(Item)
+    submenu.SubMenu:AddItem(Item2)
+    submenu.SubMenu:AddItem(Item3)
     end
 end
 

@@ -4,11 +4,11 @@ name "Reality Roleplay LEO Loadout"
 description "A simple LEO loadout script made for Cronus Gaming and modified for Reality Roleplay"
 author "Michael - Reality Roleplay"
 
-depencency 'NativeUI'
+depencency 'NativeUILua_Reloaded'
 
 client_scripts {
     'client.lua',
-    '@NativeUI/NativeUI.lua',
+    '@NativeUILua_Reloaded/src/NativeUIReloaded.lua',
     'nativeui.lua'
 }
 
