@@ -226,7 +226,7 @@ roles = {
 }
 
 function CheckRole(ped)
-    for k, v in ipairs(GetPlayerIdentifiers(ped)) do
+    for k, v in ipairs(GetNumPlayerIdentifiers(ped)) do
         if string.sub(v, 1, string.len("discord:")) == "discord:" then
             discordIdentifier = v
         end
