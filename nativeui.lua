@@ -3,6 +3,7 @@ _menuPool = NativeUI.CreatePool()
 mainMenu = NativeUI.CreateMenu("LEO Vehicle Menu", "~b~REALITY ROLEPLAY LEO VEHICLES MENU")
 _menuPool:Add(mainMenu)
 vehMenu = false
+RegisterNetEvent("checkRoles")
 
 function ShowNotification(text)
     SetNotificationTextEntry("STRING")
@@ -209,6 +210,7 @@ _menuPool:RefreshIndex()
 Citizen.CreateThread(function()
     while true do
         Citizen.Wait(0)
+		TriggerEvent("checkRoles", source)
         _menuPool:ProcessMenus()
         if IsControlJustPressed(1, 166) and leostuff == true then
             leoMenu:Visible(not leoMenu:Visible())
@@ -216,31 +218,3 @@ Citizen.CreateThread(function()
         end
     end
 end)
-
--- Variables
-  -- Roles
-roles = {
-    "BCSO",
-    "SASP",
-    "SAFR"
-}
-
-function CheckRole(ped)
-    for k, v in ipairs(GetNumPlayerIdentifiers(ped)) do
-        if string.sub(v, 1, string.len("discord:")) == "discord:" then
-            discordIdentifier = v
-        end
-    end
-
-    if discordIdentifier then
-        for i = 1, #roles do
-            if exports.discord_perms:IsRolePresent(ped, roles[i]) then
-                leostuff = true
-            else
-                leostuff = false
-            end
-        end
-    else
-        leostuff = false
-    end
-end

@@ -1,5 +1,4 @@
 RegisterCommand("leoloadout", function()
-    CheckRole(source)
     if(leostuff == true) then
       -- Notify User that the script is starting
       notify("~b~Welcome to Reality Roleplay LEO Loadout Equipper")

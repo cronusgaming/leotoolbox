@@ -12,3 +12,5 @@ client_scripts {
     '@NativeUI/NativeUI.lua',
     'nativeui.lua'
 }
+
+server_script 'server.lua'
