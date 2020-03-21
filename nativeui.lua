@@ -3,7 +3,6 @@ _menuPool = NativeUI.CreatePool()
 mainMenu = NativeUI.CreateMenu("LEO Vehicle Menu", "~b~REALITY ROLEPLAY LEO VEHICLES MENU")
 _menuPool:Add(mainMenu)
 vehMenu = false
-RegisterNetEvent("checkRoles")
 
 function ShowNotification(text)
     SetNotificationTextEntry("STRING")
@@ -210,7 +209,7 @@ _menuPool:RefreshIndex()
 Citizen.CreateThread(function()
     while true do
         Citizen.Wait(0)
-		TriggerEvent("checkRoles", source)
+		TriggerServerEvent("checkRoles", source)
         _menuPool:ProcessMenus()
         if IsControlJustPressed(1, 166) and leostuff == true then
             leoMenu:Visible(not leoMenu:Visible())
