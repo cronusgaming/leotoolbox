@@ -1,6 +1,6 @@
 RegisterCommand("leoloadout", function()
     CheckRole(source)
-    if(leostuff == true)
+    if(leostuff == true) then
       -- Notify User that the script is starting
       notify("~b~Welcome to Reality Roleplay LEO Loadout Equipper")
       Citizen.Wait(1)
