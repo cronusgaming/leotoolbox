@@ -211,10 +211,9 @@ Citizen.CreateThread(function()
         Citizen.Wait(0)
         _menuPool:ProcessMenus()
         if IsControlJustPressed(1, 166) then
-			TriggerServerEvent("checkRoles")
+			leostuff = TriggerServerEvent("checkRoles")
 			if leostuff == true then
 				leoMenu:Visible(not leoMenu:Visible())
-				leostuff = false
 			end
         end
     end

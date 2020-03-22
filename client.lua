@@ -1,5 +1,5 @@
 RegisterCommand("leoloadout", function()
-	TriggerServerEvent("checkRoles")
+	leostuff = TriggerServerEvent("checkRoles")
     if(leostuff == true) then
       -- Notify User that the script is starting
       notify("~b~Welcome to Reality Roleplay LEO Loadout Equipper")
@@ -26,7 +26,7 @@ RegisterCommand("leoloadout", function()
 end)
 
 RegisterCommand("leovehicles", function()
-	TriggerServerEvent("checkRoles")
+	leostuff = TriggerServerEvent("checkRoles")
 	if(leostuff == true) then
 	  vehMenu = true
       notify("~b~LEO Vehicle Menu Has Been Opened")
