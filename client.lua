@@ -2,7 +2,7 @@ RegisterCommand("leoloadout", function()
 	leostuff = TriggerServerEvent("checkRoles")
     if(leostuff == true) then
       -- Notify User that the script is starting
-      notify("~b~Welcome to Reality Roleplay LEO Loadout Equipper")
+      notify("~b~Reality Roleplay LEO Loadout Equipper")
       Citizen.Wait(1)
       -- Give user the following weapons
       giveWeapon("weapon_combatpistol")

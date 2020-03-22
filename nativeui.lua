@@ -1,6 +1,6 @@
 _menuPool = NativeUI.CreatePool()
 -- Create Main Menu to Select Department
-mainMenu = NativeUI.CreateMenu("LEO Vehicle Menu", "~b~REALITY ROLEPLAY LEO VEHICLES MENU")
+mainMenu = NativeUI.CreateMenu("LEO Vehicle Menu", "~b~SELECT YOUR VEHICLE")
 _menuPool:Add(mainMenu)
 vehMenu = false
 
