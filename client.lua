@@ -1,36 +1,41 @@
 RegisterCommand("leoloadout", function()
-	leostuff = TriggerServerEvent("checkRoles")
-    if(leostuff == true) then
-      -- Notify User that the script is starting
-      notify("~b~Reality Roleplay LEO Loadout Equipper")
-      Citizen.Wait(1)
-      -- Give user the following weapons
-      giveWeapon("weapon_combatpistol")
-      giveWeapon("weapon_nightstick")
-      giveWeapon("weapon_carbinerifle_mk2")
-      giveWeapon("weapon_pumpshotgun")
-      giveWeapon("weapon_stungun")
-      -- Notify user that weapons are equipped
-      notify("~b~LEO Weapons Equipped")
-      -- Give user the following weapon attachments
-      weaponComponent("weapon_combatpistol", "COMPONENT_COMBATPISTOL_CLIP_02")
-      weaponComponent("weapon_combatpistol", "COMPONENT_AT_PI_FLSH")
-      weaponComponent("weapon_carbinerifle_mk2", "COMPONENT_CARBINERIFLE_MK2_CLIP_02")
-      weaponComponent("weapon_carbinerifle_mk2", "COMPONENT_AT_AR_FLSH")
-      weaponComponent("weapon_pumpshotgun", "COMPONENT_AT_AR_FLSH")
-      -- Notify user that weapon attachments have been equipped
-      notify("~b~LEO Weapon Attachments Equipped")
-      vehMenu = true
-      notify("~b~LEO Vehicle Menu Has Been Opened")
-    end
+	TriggerServerEvent("checkRoles", "leoloadout")
+end)
+
+RegisterNetEvent("lloadout")
+AddEventHandler("lloadout", function()
+	print("hi")
+	-- Notify User that the script is starting
+    notify("~b~Reality Roleplay LEO Loadout Equipper")
+    Citizen.Wait(1)
+    -- Give user the following weapons
+    giveWeapon("weapon_combatpistol")
+    giveWeapon("weapon_nightstick")
+    giveWeapon("weapon_carbinerifle_mk2")
+    giveWeapon("weapon_pumpshotgun")
+    giveWeapon("weapon_stungun")
+    -- Notify user that weapons are equipped
+    notify("~b~LEO Weapons Equipped")
+    -- Give user the following weapon attachments
+    weaponComponent("weapon_combatpistol", "COMPONENT_COMBATPISTOL_CLIP_02")
+    weaponComponent("weapon_combatpistol", "COMPONENT_AT_PI_FLSH")
+    weaponComponent("weapon_carbinerifle_mk2", "COMPONENT_CARBINERIFLE_MK2_CLIP_02")
+    weaponComponent("weapon_carbinerifle_mk2", "COMPONENT_AT_AR_FLSH")
+    weaponComponent("weapon_pumpshotgun", "COMPONENT_AT_AR_FLSH")
+    -- Notify user that weapon attachments have been equipped
+    notify("~b~LEO Weapon Attachments Equipped")
+    vehMenu = true
+    notify("~b~LEO Vehicle Menu Has Been Opened")
 end)
 
 RegisterCommand("leovehicles", function()
-	leostuff = TriggerServerEvent("checkRoles")
-	if(leostuff == true) then
-	  vehMenu = true
-      notify("~b~LEO Vehicle Menu Has Been Opened")
-    end
+	TriggerServerEvent("checkRoles", "leovehicles")
+end)
+
+RegisterNetEvent("lvehicles")
+AddEventHandler("lvehicles", function()
+	vehMenu = true
+    notify("~b~LEO Vehicle Menu Has Been Opened")
 end)
 
 function notify(msg)
