@@ -4,7 +4,6 @@ end)
 
 RegisterNetEvent("lloadout")
 AddEventHandler("lloadout", function()
-	print("hi")
 	-- Notify User that the script is starting
     notify("~b~Reality Roleplay LEO Loadout Equipper")
     Citizen.Wait(1)
