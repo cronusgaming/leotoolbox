@@ -72,8 +72,8 @@ function fireMenu(menu)
     end
 end
 
-function swatMenu(menu)
-    local submenu = _menuPool:AddSubMenu(menu, "SWAT Vehicles")
+function sheriffMenu(menu)
+    local submenu = _menuPool:AddSubMenu(menu, "Sheriff Vehicles")
     for i = 1, 1 do
         local Item = NativeUI.CreateItem("Bearcat", "Spawn SWAT Bearcat")
         Item.Activated = function(ParentMenu, SelectedItem)
@@ -93,9 +93,9 @@ function swatMenu(menu)
     end
 end
 
+sheriffMenu(mainMenu)
 stateMenu(mainMenu)
 fireMenu(mainMenu)
-swatMenu(mainMenu)
 _menuPool:RefreshIndex()
 
 Citizen.CreateThread(function()
