@@ -10,8 +10,8 @@ function ShowNotification(text)
     DrawNotification(false, false)
 end
 
-function sheriffMenu(menu)
-    local submenu = _menuPool:AddSubMenu(menu, "Sheriff Vehicles")
+function stateMenu(menu)
+    local submenu = _menuPool:AddSubMenu(menu, "State Police Vehicles")
     for i = 1, 1 do
         local Item = NativeUI.CreateItem("Crown Victoria", "Spawn Sheriff CVPI")
         Item.Activated = function(ParentMenu, SelectedItem)
@@ -93,7 +93,7 @@ function swatMenu(menu)
     end
 end
 
-sheriffMenu(mainMenu)
+stateMenu(mainMenu)
 fireMenu(mainMenu)
 swatMenu(mainMenu)
 _menuPool:RefreshIndex()

@@ -4,7 +4,6 @@ end)
 
 RegisterNetEvent("lloadout")
 AddEventHandler("lloadout", function()
-	print("hi")
 	-- Notify User that the script is starting
     notify("~b~Reality Roleplay LEO Loadout Equipper")
     Citizen.Wait(1)
@@ -14,6 +13,7 @@ AddEventHandler("lloadout", function()
     giveWeapon("weapon_carbinerifle_mk2")
     giveWeapon("weapon_pumpshotgun")
     giveWeapon("weapon_stungun")
+    giveWeapon("weapon_flashlight")
     -- Notify user that weapons are equipped
     notify("~b~LEO Weapons Equipped")
     -- Give user the following weapon attachments
@@ -21,6 +21,7 @@ AddEventHandler("lloadout", function()
     weaponComponent("weapon_combatpistol", "COMPONENT_AT_PI_FLSH")
     weaponComponent("weapon_carbinerifle_mk2", "COMPONENT_CARBINERIFLE_MK2_CLIP_02")
     weaponComponent("weapon_carbinerifle_mk2", "COMPONENT_AT_AR_FLSH")
+    weaponComponent("weapon_carbinerifle_mk2", "COMPONENT_AT_AR_AFGRIP_02")
     weaponComponent("weapon_pumpshotgun", "COMPONENT_AT_AR_FLSH")
     -- Notify user that weapon attachments have been equipped
     notify("~b~LEO Weapon Attachments Equipped")
