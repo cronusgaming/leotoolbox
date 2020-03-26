@@ -13,89 +13,102 @@ end
 function stateMenu(menu)
     local submenu = _menuPool:AddSubMenu(menu, "State Police Vehicles")
     for i = 1, 1 do
-        local Item = NativeUI.CreateItem("Crown Victoria", "Spawn Sheriff CVPI")
+        local Item = NativeUI.CreateItem("2014 Charger", "Spawn State 2014 Charger")
         Item.Activated = function(ParentMenu, SelectedItem)
-            spawnCar("sheriff")
+            spawnCar("14Chgr")
         end
-        local Item2 = NativeUI.CreateItem("Tahoe", "Spawn Sheriff Tahoe")
+        local Item2 = NativeUI.CreateItem("2016 Explorer", "Spawn State 2016 Explorer")
         Item2.Activated = function(ParentMenu, SelectedItem)
-            spawnCar("sheriff2")
+            spawnCar("16Exp")
         end
-        local Item3 = NativeUI.CreateItem("Charger", "Spawn Sheriff Charger")
+        local Item3 = NativeUI.CreateItem("2018 Charger", "Spawn State 2018 Charger")
         Item3.Activated = function(ParentMenu, SelectedItem)
-            spawnCar("sheriff4")
+            spawnCar("18Chgr")
         end
-        local Item4 = NativeUI.CreateItem("Taurus", "Spawn Sheriff FPIS")
+        local Item4 = NativeUI.CreateItem("2019 Tahoe", "Spawn State 2019 Tahoe")
         Item4.Activated = function(ParentMenu, SelectedItem)
-            spawnCar("sheriff5")
+            spawnCar("19Hoe")
         end
-        local Item5 = NativeUI.CreateItem("Explorer", "Spawn Sheriff FPIU")
+        local Item5 = NativeUI.CreateItem("Caprice", "Spawn State Caprice")
         Item5.Activated = function(ParentMenu, SelectedItem)
-            spawnCar("sheriff6")
+            spawnCar("Cap")
+        end
+        local Item6 = NativeUI.CreateItem("Ford Taurus", "Spawn State Ford Taurus")
+        Item6.Activated = function(ParentMenu, SelectedItem)
+            spawnCar("Tau")
+        end
+        local Item7 = NativeUI.CreateItem("CVPI", "Spawn State CVPI")
+        Item7.Activated = function(ParentMenu, SelectedItem)
+            spawnCar("Vic")
         end
     submenu.SubMenu:AddItem(Item)
     submenu.SubMenu:AddItem(Item2)
     submenu.SubMenu:AddItem(Item3)
     submenu.SubMenu:AddItem(Item4)
     submenu.SubMenu:AddItem(Item5)
-    end
-end
-
-function fireMenu(menu)
-    local submenu = _menuPool:AddSubMenu(menu, "Fire Rescue Vehicles")
-    for i = 1, 1 do
-        local Item = NativeUI.CreateItem("Ladder", "Spawn FR Ladder Truck")
-        Item.Activated = function(ParentMenu, SelectedItem)
-            spawnCar("ladder4")
-        end
-        local Item2 = NativeUI.CreateItem("Engine", "Spawn FR Engine")
-        Item2.Activated = function(ParentMenu, SelectedItem)
-            spawnCar("firetruk2")
-        end
-        local Item3 = NativeUI.CreateItem("Engine 2", "Spawn FR Engine 2")
-        Item3.Activated = function(ParentMenu, SelectedItem)
-            spawnCar("firetruk4")
-        end
-        local Item4 = NativeUI.CreateItem("Rescue", "Spawn FR Rescue Truck")
-        Item4.Activated = function(ParentMenu, SelectedItem)
-            spawnCar("srescue1")
-        end
-        local Item5 = NativeUI.CreateItem("Ambulance", "Spawn FR Ambulance")
-        Item5.Activated = function(ParentMenu, SelectedItem)
-            spawnCar("ambulance")
-        end
-    submenu.SubMenu:AddItem(Item)
-    submenu.SubMenu:AddItem(Item2)
-    submenu.SubMenu:AddItem(Item3)
-    submenu.SubMenu:AddItem(Item4)
-    submenu.SubMenu:AddItem(Item5)
+    submenu.SubMenu:AddItem(Item6)
+    submenu.SubMenu:AddItem(Item7)
     end
 end
 
 function sheriffMenu(menu)
     local submenu = _menuPool:AddSubMenu(menu, "Sheriff Vehicles")
     for i = 1, 1 do
-        local Item = NativeUI.CreateItem("Bearcat", "Spawn SWAT Bearcat")
+        local Item = NativeUI.CreateItem("2018 Charger", "Spawn Sheriff 2018 Charger")
         Item.Activated = function(ParentMenu, SelectedItem)
-            spawnCar("swat")
+            spawnCar("charger")
         end
-        local Item2 = NativeUI.CreateItem("Tahoe", "Spawn SWAT Tahoe")
+        local Item2 = NativeUI.CreateItem("CVPI", "Spawn Sheriff CVPI")
         Item2.Activated = function(ParentMenu, SelectedItem)
-            spawnCar("sum2")
+            spawnCar("crownvic")
         end
-        local Item3 = NativeUI.CreateItem("Charger", "Spawn SWAT Charger")
+        local Item3 = NativeUI.CreateItem("2019 Durango", "Spawn Sheriff 2019 Durango")
         Item3.Activated = function(ParentMenu, SelectedItem)
-            spawnCar("sum1")
+            spawnCar("durango")
+        end
+        local Item4 = NativeUI.CreateItem("2016 Explorer", "Spawn Sheriff 2016 Explorer")
+        Item4.Activated = function(ParentMenu, SelectedItem)
+            spawnCar("explorer")
+        end
+        local Item5 = NativeUI.CreateItem("Impala", "Spawn Sheriff Impala")
+        Item5.Activated = function(ParentMenu, SelectedItem)
+            spawnCar("impala")
+        end
+        local Item6 = NativeUI.CreateItem("2019 Tahoe", "Spawn Sheriff 2019 Tahoe")
+        Item6.Activated = function(ParentMenu, SelectedItem)
+            spawnCar("tahoe")
+        end
+        local Item7 = NativeUI.CreateItem("2006 Tahoe", "Spawn Sheriff 2006 Tahoe")
+        Item7.Activated = function(ParentMenu, SelectedItem)
+            spawnCar("tahoe06")
+        end
+        local Item8 = NativeUI.CreateItem("2013 Tahoe", "Spawn Sheriff 2013 Tahoe")
+        Item8.Activated = function(ParentMenu, SelectedItem)
+            spawnCar("tahoe13")
+        end
+        local Item9 = NativeUI.CreateItem("Ford Taurus", "Spawn Sheriff Ford Taurus")
+        Item9.Activated = function(ParentMenu, SelectedItem)
+            spawnCar("taurus")
+        end
+        local Item10 = NativeUI.CreateItem("Kawasaki", "Spawn Sheriff Kawasaki")
+        Item10.Activated = function(ParentMenu, SelectedItem)
+            spawnCar("kawasaki")
         end
     submenu.SubMenu:AddItem(Item)
     submenu.SubMenu:AddItem(Item2)
     submenu.SubMenu:AddItem(Item3)
+    submenu.SubMenu:AddItem(Item4)
+    submenu.SubMenu:AddItem(Item5)
+    submenu.SubMenu:AddItem(Item6)
+    submenu.SubMenu:AddItem(Item7)
+    submenu.SubMenu:AddItem(Item8)
+    submenu.SubMenu:AddItem(Item9)
+    submenu.SubMenu:AddItem(Item10)
     end
 end
 
 sheriffMenu(mainMenu)
 stateMenu(mainMenu)
-fireMenu(mainMenu)
 _menuPool:RefreshIndex()
 
 Citizen.CreateThread(function()
