@@ -1,5 +1,5 @@
 # LEO/EMS Toolbox for FiveM
-LEO Toolbox and Weapon Equipper Menu Modified for Reality Roleplay
+LEO Toolbox and Weapon Equipper Menu for Cronus Gaming
 
 Made using [NativeUI Lua Reloaded](https://github.com/iTexZoz/NativeUILua_Reloaded), [Discord Perms "API"](https://github.com/Illusivee/discord_perms), and [LEOToolbox](https://github.com/MichaelRP1/leotoolbox)
 
@@ -24,7 +24,7 @@ Include `client_script '@NativeUI/NativeUI.lua'` in your `__resource.lua` to use
 
 At this time, no support is availible for this resource, so please use it at your own risk.
 
-Reality Roleplay staff is not under any obligation to help you with this resource
+Cronus Gaming staff is not under any obligation to help you with this resource
 
 ## Credit
 [Frazzle](https://github.com/FrazzIe)

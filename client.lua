@@ -5,7 +5,7 @@ end)
 RegisterNetEvent("lloadout")
 AddEventHandler("lloadout", function()
 	-- Notify User that the script is starting
-    notify("~b~Reality Roleplay LEO Loadout Equipper")
+    notify("~b~Cronus Gaming LEO Loadout Equipper")
     Citizen.Wait(1)
     -- Give user the following weapons
     giveWeapon("weapon_combatpistol")
