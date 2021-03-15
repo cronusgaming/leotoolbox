@@ -192,10 +192,10 @@ function entityOption(menu)
         Item4.Activated = function(ParentMenu, SelectedItem)
             spawnEntity("prop_trafficdiv_01")
         end
-    submenu:AddItem(Item)
-    submenu:AddItem(Item2)
-    submenu:AddItem(Item3)
-    submenu:AddItem(Item4)
+    submenu.SubMenu:AddItem(Item)
+    submenu.SubMenu:AddItem(Item2)
+    submenu.SubMenu:AddItem(Item3)
+    submenu.SubMenu:AddItem(Item4)
     end
 end
 
